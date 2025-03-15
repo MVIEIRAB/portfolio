@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FFC107;
+  --primary-dark: #FFA000;
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --background: #FFFFFF;
+  --background-alt: #F5F5F5;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #FFC107 0%, #FFA000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+} 
